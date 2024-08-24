@@ -17,7 +17,7 @@ services:
     restart: always
     build:
       context: .
-      dockerfile: ./eHospitalService/Dockerfile
+      dockerfile: ./eHospitalServer/Dockerfile
     depends_on:
       - postgres
     ports:
