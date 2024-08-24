@@ -9,7 +9,16 @@ using System.Security.Claims;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddDefaultCors();
+builder.Services.AddCors(configure =>
+{
+    configure.AddDefaultPolicy(policy =>
+    {
+        policy
+            .AllowAnyHeader() 
+            .AllowAnyOrigin() 
+            .AllowAnyMethod(); 
+    });
+});
 
 builder.Services.AddBusiness();
 builder.Services.AddDataAccess(builder.Configuration);
