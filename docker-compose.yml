@@ -1,0 +1,46 @@
+services:
+  postgres:
+    image: postgres
+    restart: always
+    container_name: postgresdb
+    environment:
+      POSTGRES_DB: ehospital
+      POSTGRES_USER: ehospitalsa
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    ports:
+      - "5433:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - ehospital-network
+  ehospital-api:
+    restart: always
+    build:
+      context: .
+      dockerfile: ./eHospitalService/Dockerfile
+    depends_on:
+      - postgres
+    ports:
+      - "5010:8080"
+      - "5011:8081"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+      - ConnectionStrings__DefaultConnection=Host=postgres;Database=ehospital;Username=ehospitalsa;Password=${POSTGRES_PASSWORD}
+    networks:
+      - ehospital-network
+  ehospital-client:
+    restart: always
+    build:
+      context: .
+      dockerfile: ./eHospitalClient/Dockerfile
+    ports:
+      - "5012:80"
+    networks:
+      - ehospital-network
+networks:
+  ehospital-network:
+    driver: bridge
+
+
+volumes:
+  postgres_data:

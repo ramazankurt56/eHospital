@@ -13,8 +13,8 @@ using eHospitalServer.DataAccess.Context;
 namespace eHospitalServer.DataAccess.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20240225083722_mg4")]
-    partial class mg4
+    [Migration("20240824185316_Table_Added")]
+    partial class Table_Added
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -51,11 +51,64 @@ namespace eHospitalServer.DataAccess.Migrations
                     b.ToTable("roles", (string)null);
                 });
 
+            modelBuilder.Entity("eHospitalServer.Entities.Models.Appointment", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid")
+                        .HasColumnName("id");
+
+                    b.Property<Guid>("DoctorId")
+                        .HasColumnType("uuid")
+                        .HasColumnName("doctor_id");
+
+                    b.Property<DateTime>("EndDate")
+                        .HasColumnType("timestamp with time zone")
+                        .HasColumnName("end_date");
+
+                    b.Property<string>("EpicrisisReport")
+                        .IsRequired()
+                        .HasColumnType("text")
+                        .HasColumnName("epicrisis_report");
+
+                    b.Property<bool>("IsItFinished")
+                        .HasColumnType("boolean")
+                        .HasColumnName("is_it_finished");
+
+                    b.Property<Guid>("PatientId")
+                        .HasColumnType("uuid")
+                        .HasColumnName("patient_id");
+
+                    b.Property<decimal>("Price")
+                        .HasColumnType("money")
+                        .HasColumnName("price");
+
+                    b.Property<DateTime>("StartDate")
+                        .HasColumnType("timestamp with time zone")
+                        .HasColumnName("start_date");
+
+                    b.HasKey("Id")
+                        .HasName("pk_appointments");
+
+                    b.HasIndex("DoctorId")
+                        .HasDatabaseName("ix_appointments_doctor_id");
+
+                    b.HasIndex("PatientId")
+                        .HasDatabaseName("ix_appointments_patient_id");
+
+                    b.ToTable("appointments", (string)null);
+                });
+
             modelBuilder.Entity("eHospitalServer.Entities.Models.DoctorDetail", b =>
                 {
-                    b.Property<Guid>("UserId")
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("uuid")
-                        .HasColumnName("user_id");
+                        .HasColumnName("id");
+
+                    b.Property<decimal>("AppointmentPrice")
+                        .HasColumnType("money")
+                        .HasColumnName("appointment_price");
 
                     b.Property<int>("Specialty")
                         .HasColumnType("integer")
@@ -66,7 +119,7 @@ namespace eHospitalServer.DataAccess.Migrations
                         .HasColumnType("text[]")
                         .HasColumnName("working_days");
 
-                    b.HasKey("UserId")
+                    b.HasKey("Id")
                         .HasName("pk_doctor_details");
 
                     b.ToTable("doctor_details", (string)null);
@@ -103,6 +156,14 @@ namespace eHospitalServer.DataAccess.Migrations
                         .HasColumnType("text")
                         .HasColumnName("email");
 
+                    b.Property<int>("EmailConfirmCode")
+                        .HasColumnType("integer")
+                        .HasColumnName("email_confirm_code");
+
+                    b.Property<DateTime>("EmailConfirmCodeSendDate")
+                        .HasColumnType("timestamp with time zone")
+                        .HasColumnName("email_confirm_code_send_date");
+
                     b.Property<bool>("EmailConfirmed")
                         .HasColumnType("boolean")
                         .HasColumnName("email_confirmed");
@@ -111,6 +172,14 @@ namespace eHospitalServer.DataAccess.Migrations
                         .IsRequired()
                         .HasColumnType("text")
                         .HasColumnName("first_name");
+
+                    b.Property<int?>("ForgotPasswordCode")
+                        .HasColumnType("integer")
+                        .HasColumnName("forgot_password_code");
+
+                    b.Property<DateTime?>("ForgotPasswordCodeSendDate")
+                        .HasColumnType("timestamp with time zone")
+                        .HasColumnName("forgot_password_code_send_date");
 
                     b.Property<string>("FullAddress")
                         .IsRequired()
@@ -163,13 +232,17 @@ namespace eHospitalServer.DataAccess.Migrations
                         .HasColumnType("boolean")
                         .HasColumnName("phone_number_confirmed");
 
+                    b.Property<string>("RefreshToken")
+                        .HasColumnType("text")
+                        .HasColumnName("refresh_token");
+
+                    b.Property<DateTime?>("RefreshTokenExpires")
+                        .HasColumnType("timestamp with time zone")
+                        .HasColumnName("refresh_token_expires");
+
                     b.Property<string>("SecurityStamp")
                         .HasColumnType("text")
                         .HasColumnName("security_stamp");
-
-                    b.Property<int>("Total")
-                        .HasColumnType("integer")
-                        .HasColumnName("total");
 
                     b.Property<bool>("TwoFactorEnabled")
                         .HasColumnType("boolean")
@@ -186,21 +259,44 @@ namespace eHospitalServer.DataAccess.Migrations
                     b.HasKey("Id")
                         .HasName("pk_users");
 
+                    b.HasIndex("DoctorDetailId")
+                        .HasDatabaseName("ix_users_doctor_detail_id");
+
+                    b.HasIndex("EmailConfirmCode")
+                        .IsUnique()
+                        .HasDatabaseName("ix_users_email_confirm_code");
+
                     b.ToTable("users", (string)null);
                 });
 
-            modelBuilder.Entity("eHospitalServer.Entities.Models.DoctorDetail", b =>
+            modelBuilder.Entity("eHospitalServer.Entities.Models.Appointment", b =>
                 {
-                    b.HasOne("eHospitalServer.Entities.Models.User", null)
-                        .WithOne("DoctorDetail")
-                        .HasForeignKey("eHospitalServer.Entities.Models.DoctorDetail", "UserId")
+                    b.HasOne("eHospitalServer.Entities.Models.User", "Doctor")
+                        .WithMany()
+                        .HasForeignKey("DoctorId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired()
-                        .HasConstraintName("fk_doctor_details_users_user_id");
+                        .HasConstraintName("fk_appointments_users_doctor_id");
+
+                    b.HasOne("eHospitalServer.Entities.Models.User", "Patient")
+                        .WithMany()
+                        .HasForeignKey("PatientId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired()
+                        .HasConstraintName("fk_appointments_users_patient_id");
+
+                    b.Navigation("Doctor");
+
+                    b.Navigation("Patient");
                 });
 
             modelBuilder.Entity("eHospitalServer.Entities.Models.User", b =>
                 {
+                    b.HasOne("eHospitalServer.Entities.Models.DoctorDetail", "DoctorDetail")
+                        .WithMany()
+                        .HasForeignKey("DoctorDetailId")
+                        .HasConstraintName("fk_users_doctor_details_doctor_detail_id");
+
                     b.Navigation("DoctorDetail");
                 });
 #pragma warning restore 612, 618

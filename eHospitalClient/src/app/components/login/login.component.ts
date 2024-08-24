@@ -5,6 +5,7 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { AuthService } from '../../services/auth.service';
 import { Router } from '@angular/router';
 import { FormValidateDirective } from 'form-validate-angular';
+import { environment } from '../../../enviroments/environment';
 
 @Component({
   selector: 'app-login',
@@ -35,7 +36,7 @@ export class LoginComponent {
 
   login(form: NgForm){
     if(form.valid){
-      this.http.post("https://localhost:7169/api/auth/login", this.loginModel).subscribe({
+      this.http.post(`${environment.api_url}/auth/login`, this.loginModel).subscribe({
         next: (res:any) => {
           localStorage.setItem("token", res.data.token);
           this.router.navigateByUrl("/");

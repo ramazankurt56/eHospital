@@ -9,7 +9,7 @@ import { AppointmentModel } from '../../models/appointment.model';
 import { ResultModel } from '../../models/result.model';
 import { AppointmentDataModel } from '../../models/appointment-data.model';
 import { AuthService } from '../../services/auth.service';
-
+import { environment } from '../../../enviroments/environment';
 declare const $: any;
 
 @Component({
@@ -54,9 +54,8 @@ export class HomeComponent implements OnInit {
     }
    
   }
-
   getAllDoctors() {
-    this.http.get("https://localhost:7169/api/Appointments/GetAllDoctors").subscribe((res: any) => {
+    this.http.get(`${environment.api_url}/Appointments/GetAllDoctors`).subscribe((res: any) => {
       this.doctors = res.data;
     })
   }
@@ -64,7 +63,7 @@ export class HomeComponent implements OnInit {
   getDoctorAppointments() {
     if (this.selectedDoctorId === "") return;
 
-    this.http.get(`https://localhost:7169/api/Appointments/GetAllByDoctorId?doctorId=${this.selectedDoctorId}`).subscribe((res: any) => {
+    this.http.get(`${environment.api_url}/Appointments/GetAllByDoctorId?doctorId=${this.selectedDoctorId}`).subscribe((res: any) => {
 
       console.log(res.data);
 
@@ -110,7 +109,7 @@ export class HomeComponent implements OnInit {
         "price": this.doctors.find(p=> p.id == this.addModel.doctorId)?.doctorDetail?.price
       };
 
-      this.http.post("https://localhost:7169/api/Appointments/Create",data).subscribe(res=> {
+      this.http.post(`${environment.api_url}/Appointments/Create`,data).subscribe(res=> {
         $("#addAppointmentModal").modal('hide');
         this.getDoctorAppointments();
         this.addModel = new AppointmentModel();
@@ -121,7 +120,7 @@ export class HomeComponent implements OnInit {
   findPatientByIdentityNumber() {
     if(this.addModel.patient.identityNumber.length < 11) return;
     this.http.post<ResultModel<UserModel>>
-      (`https://localhost:7169/api/Appointments/FindPatientByIdentityNumber`,
+      (`${environment.api_url}/Appointments/FindPatientByIdentityNumber`,
         { identityNumber: this.addModel.patient.identityNumber }).subscribe((res) => {
           if (res.data !== undefined && res.data !== null) {
             this.addModel.patient = res.data;
@@ -135,7 +134,7 @@ export class HomeComponent implements OnInit {
 
     if(result){
       const id = event.appointmentData.id;
-      this.http.get(`https://localhost:7169/api/Appointments/DeleteById?id=${id}`).subscribe(res=> {
+      this.http.get(`${environment.api_url}/Appointments/DeleteById?id=${id}`).subscribe(res=> {
         this.getDoctorAppointments();
       });
     }

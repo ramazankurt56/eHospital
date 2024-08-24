@@ -1,4 +1,5 @@
-﻿using eHospitalServer.DataAccess.Context;
+﻿using eHospitalServer.DataAccess.BackgroundJobs;
+using eHospitalServer.DataAccess.Context;
 using eHospitalServer.DataAccess.Options;
 using eHospitalServer.DataAccess.Services;
 using eHospitalServer.Entities.Models;
@@ -17,17 +18,17 @@ public static class DependencyInjection
         this IServiceCollection services,
         IConfiguration configuration)
     {
-        services.AddAutoMapper(Assembly.GetExecutingAssembly());        
+        services.AddAutoMapper(Assembly.GetExecutingAssembly());
 
         services.AddDbContext<ApplicationDbContext>(options =>
         {
             options
-                .UseNpgsql(configuration.GetConnectionString("PostgreSQL"))
-                .UseSnakeCaseNamingConvention();            
+                .UseNpgsql(configuration.GetConnectionString("DefaultConnection"))
+                .UseSnakeCaseNamingConvention();
         });
 
         services.AddScoped<IUnitOfWork>(srv => srv.GetRequiredService<ApplicationDbContext>());
-
+        services.AddHostedService<DatabaseMigratorJob>();
         services
             .AddIdentity<User, IdentityRole<Guid>>(cfr =>
             {
@@ -56,7 +57,7 @@ public static class DependencyInjection
         //services.AddAuthorization();
 
         services.AddScoped<JwtProvider>();
-        
+
         services.Scan(action =>
         {
             action
@@ -66,7 +67,7 @@ public static class DependencyInjection
             .AsMatchingInterface()
             .AsImplementedInterfaces()
             .WithScopedLifetime();
-        });      
+        });
 
         return services;
     }
