@@ -2,7 +2,7 @@ services:
   postgres:
     image: postgres
     restart: always
-    container_name: postgresdb
+    container_name: postgresgospitaldb
     environment:
       POSTGRES_DB: ehospital
       POSTGRES_USER: ehospitalsa
@@ -17,7 +17,7 @@ services:
     restart: always
     build:
       context: .
-      dockerfile: ./eHospitalServer.WebAPI/Dockerfile
+      dockerfile: ./eHospitalServer/eHospitalServer.WebAPI/Dockerfile
     depends_on:
       - postgres
     ports:

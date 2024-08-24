@@ -5,7 +5,7 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { AuthService } from '../../services/auth.service';
 import { Router } from '@angular/router';
 import { FormValidateDirective } from 'form-validate-angular';
-import { environment } from '../../../enviroments/environment';
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-login',

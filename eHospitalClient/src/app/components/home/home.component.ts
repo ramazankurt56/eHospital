@@ -9,7 +9,7 @@ import { AppointmentModel } from '../../models/appointment.model';
 import { ResultModel } from '../../models/result.model';
 import { AppointmentDataModel } from '../../models/appointment-data.model';
 import { AuthService } from '../../services/auth.service';
-import { environment } from '../../../enviroments/environment';
+import { environment } from '../../../environments/environment';
 declare const $: any;
 
 @Component({
