@@ -18,20 +18,19 @@ public static class ExtensionsMiddleware
             {
                 new User
                 {
-                    UserName = "admin",
-                    Email = "admin@admin.com",
-                    FirstName = "Taner",
-                    LastName = "Saydam",
-                    IdentityNumber = "11111111111",
-                    FullAddress = "Kayseri",
+                    UserName = "admintest",
+                    Email = "adminadmin@admin.com",
+                    FirstName = "Admin",
+                    LastName = "Admin",
+                    IdentityNumber = "11111111222",
+                    FullAddress = "İstanbul",
                     DateOfBirth = DateOnly.Parse("03.09.1989"),
                     EmailConfirmed = true,
                     IsActive = true,
                     IsDeleted = false,
                     BloodType = "0 rh+",
                     UserType = UserType.Admin,
-                    EmailConfirmCode = 15
-
+                    EmailConfirmCode = 25
                 },
                 new User
                 {
@@ -142,12 +141,14 @@ public static class ExtensionsMiddleware
 
             foreach (var user in users)
             {
-                if (!userManager.Users.Any(p => p.UserName == user.UserName))
+                // Kullanıcının var olup olmadığını kontrol et
+                var existingUser = userManager.Users.FirstOrDefault(p => p.UserName == user.UserName || p.Email == user.Email || p.IdentityNumber == user.IdentityNumber);
+                if (existingUser == null)
                 {
+                    // Kullanıcı veritabanında yoksa ekle
                     userManager.CreateAsync(user, "1").Wait();
                 }
             }
         }
     }
 }
-
