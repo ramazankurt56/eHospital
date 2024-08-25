@@ -26,7 +26,11 @@ public static class DependencyInjection
                 .UseNpgsql(configuration.GetConnectionString("DefaultConnection"))
                 .UseSnakeCaseNamingConvention();
         });
-
+        var connectionString = configuration.GetConnectionString("DefaultConnection");
+        if (string.IsNullOrEmpty(connectionString))
+        {
+            throw new ArgumentException("Connection string 'DefaultConnection' not found.");
+        }
         services.AddScoped<IUnitOfWork>(srv => srv.GetRequiredService<ApplicationDbContext>());
         services.AddHostedService<DatabaseMigratorJob>();
         services

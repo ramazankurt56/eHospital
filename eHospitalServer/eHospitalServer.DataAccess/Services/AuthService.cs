@@ -48,11 +48,11 @@ public class AuthService(
 
     public async Task<Result<LoginResponseDto>> LoginAsync(LoginRequestDto request, CancellationToken cancellationToken)
     {
-        string emailOrUserName = request.EmailOrUserName.ToUpper();
+        string emailOrUserName = request.EmailOrUserName;
         User? user = await userManager.Users
             .FirstOrDefaultAsync(p => 
-            p.NormalizedUserName == emailOrUserName || 
-            p.NormalizedEmail == emailOrUserName, 
+            p.UserName == emailOrUserName || 
+            p.Email == emailOrUserName, 
             cancellationToken);
 
         if(user is null)

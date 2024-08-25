@@ -20,6 +20,7 @@ builder.Services.AddCors(configure =>
     });
 });
 
+
 builder.Services.AddBusiness();
 builder.Services.AddDataAccess(builder.Configuration);
 
@@ -38,8 +39,8 @@ if (app.Environment.IsDevelopment())
 
 app.UseCors();
 
-
-ExtensionsMiddleware.CreateFirstUser(app);
+app.UseAuthorization();
+ExtensionsMiddleware.CreateFirstUsers(app);
 
 app.UseHttpsRedirection();
 
