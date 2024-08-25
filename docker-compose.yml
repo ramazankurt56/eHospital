@@ -10,7 +10,7 @@ services:
     ports:
       - "5433:5432"
     volumes:
-      - postgres_data:/var/lib/postgresql/data
+      - hospital_postgres_data:/var/lib/postgresql/data
     networks:
       - ehospital-network
   ehospital-api:
@@ -43,4 +43,4 @@ networks:
 
 
 volumes:
-  postgres_data:
+  hospital_postgres_data:
