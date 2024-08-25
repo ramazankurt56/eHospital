@@ -26,8 +26,8 @@ public static class DependencyInjection
                 .UseNpgsql(configuration.GetConnectionString("DefaultConnection"))
                 .UseSnakeCaseNamingConvention();
         });
-        services.AddScoped<IUnitOfWork>(srv => srv.GetRequiredService<ApplicationDbContext>());
         services.AddHostedService<DatabaseMigratorJob>();
+        services.AddScoped<IUnitOfWork>(srv => srv.GetRequiredService<ApplicationDbContext>());
         services
             .AddIdentity<User, IdentityRole<Guid>>(cfr =>
             {
@@ -43,7 +43,7 @@ public static class DependencyInjection
             })
             .AddEntityFrameworkStores<ApplicationDbContext>()
             .AddDefaultTokenProviders();
-
+        services.AddScoped<SeedJob>();
         //services.ConfigureOptions<JwtOptionsSetup>();
         services.Configure<JwtOptions>(configuration.GetSection("Jwt"));
         //var jwt = services.BuildServiceProvider().GetRequiredService<IOptions<JwtOptions>>();

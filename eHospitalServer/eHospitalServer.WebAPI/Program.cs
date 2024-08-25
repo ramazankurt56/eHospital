@@ -1,10 +1,6 @@
-using DefaultCorsPolicyNugetPackage;
 using eHospitalServer.Business;
 using eHospitalServer.DataAccess;
-using eHospitalServer.WebAPI.Middlewares;
-using Microsoft.AspNetCore.Identity;
-using Scrutor;
-using System.Reflection;
+using eHospitalServer.DataAccess.BackgroundJobs;
 using System.Security.Claims;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -40,7 +36,7 @@ if (app.Environment.IsDevelopment())
 app.UseCors();
 
 app.UseAuthorization();
-ExtensionsMiddleware.CreateFirstUsers(app);
+
 
 app.UseHttpsRedirection();
 
