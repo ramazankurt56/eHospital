@@ -10,12 +10,11 @@ builder.Services.AddCors(configure =>
     configure.AddDefaultPolicy(policy =>
     {
         policy
-            .AllowAnyHeader() 
-            .AllowAnyOrigin() 
-            .AllowAnyMethod(); 
+            .WithOrigins("https://ehospital.ramazankurt.com.tr") // Sadece bu domain'e izin ver
+            .AllowAnyHeader()
+            .AllowAnyMethod();
     });
 });
-
 
 builder.Services.AddBusiness();
 builder.Services.AddDataAccess(builder.Configuration);
