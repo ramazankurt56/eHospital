@@ -19,8 +19,6 @@ public class DatabaseMigratorJob : IHostedService
         using var scope = _serviceProvider.CreateScope();
         var context = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
 
-        // Migration iþlemi
-        await context.Database.EnsureCreatedAsync();
         await context.Database.MigrateAsync(cancellationToken);
 
         // Seed iþlemi
