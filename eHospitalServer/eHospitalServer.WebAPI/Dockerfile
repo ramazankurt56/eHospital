@@ -1,4 +1,5 @@
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
+USER app
 WORKDIR /app
 EXPOSE 8080
 EXPOSE 8081
@@ -23,15 +24,20 @@ COPY ["eHospitalServer/eHospitalServer.DataAccess/", "eHospitalServer.DataAccess
 
 WORKDIR "/src/eHospitalServer.WebAPI/"
 
-RUN dotnet build "eHospitalServer.WebAPI.csproj" -c $BUILD_CONFIGURATION -o /app/build --no-restore
+RUN dotnet build "./eHospitalServer.WebAPI.csproj" -c $BUILD_CONFIGURATION -o /app/build --no-restore
 
 FROM build AS publish
-RUN dotnet publish "eHospitalServer.WebAPI.csproj"-c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false --no-restore
+RUN dotnet publish "./eHospitalServer.WebAPI.csproj"-c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false --no-restore
 
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
 ENTRYPOINT ["dotnet", "eHospitalServer.WebAPI.dll"]
+
+
+
+
+
 
 
 
