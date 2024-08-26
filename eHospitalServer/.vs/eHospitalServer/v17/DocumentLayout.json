@@ -3,12 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\ramaz\\Desktop\\live\\eHospital\\eHospitalServer\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{3877FC28-87F3-457D-AE9F-E968C8C3A963}|eHospitalServer.DataAccess\\eHospitalServer.DataAccess.csproj|c:\\users\\ramaz\\desktop\\live\\ehospital\\ehospitalserver\\ehospitalserver.dataaccess\\backgroundjobs\\seedjob.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3877FC28-87F3-457D-AE9F-E968C8C3A963}|eHospitalServer.DataAccess\\eHospitalServer.DataAccess.csproj|solutionrelative:ehospitalserver.dataaccess\\backgroundjobs\\seedjob.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5AFAED4F-45E6-4C62-8DCF-8F27F47520DB}|eHospitalServer.WebAPI\\eHospitalServer.WebAPI.csproj|c:\\users\\ramaz\\desktop\\live\\ehospital\\ehospitalserver\\ehospitalserver.webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5AFAED4F-45E6-4C62-8DCF-8F27F47520DB}|eHospitalServer.WebAPI\\eHospitalServer.WebAPI.csproj|solutionrelative:ehospitalserver.webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{3877FC28-87F3-457D-AE9F-E968C8C3A963}|eHospitalServer.DataAccess\\eHospitalServer.DataAccess.csproj|c:\\users\\ramaz\\desktop\\live\\ehospital\\ehospitalserver\\ehospitalserver.dataaccess\\backgroundjobs\\databasemigratorjob.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3877FC28-87F3-457D-AE9F-E968C8C3A963}|eHospitalServer.DataAccess\\eHospitalServer.DataAccess.csproj|solutionrelative:ehospitalserver.dataaccess\\backgroundjobs\\databasemigratorjob.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3877FC28-87F3-457D-AE9F-E968C8C3A963}|eHospitalServer.DataAccess\\eHospitalServer.DataAccess.csproj|c:\\users\\ramaz\\desktop\\live\\ehospital\\ehospitalserver\\ehospitalserver.dataaccess\\backgroundjobs\\seedjob.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3877FC28-87F3-457D-AE9F-E968C8C3A963}|eHospitalServer.DataAccess\\eHospitalServer.DataAccess.csproj|solutionrelative:ehospitalserver.dataaccess\\backgroundjobs\\seedjob.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3877FC28-87F3-457D-AE9F-E968C8C3A963}|eHospitalServer.DataAccess\\eHospitalServer.DataAccess.csproj|c:\\users\\ramaz\\desktop\\live\\ehospital\\ehospitalserver\\ehospitalserver.dataaccess\\migrations\\20240825152830_tables_created.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3877FC28-87F3-457D-AE9F-E968C8C3A963}|eHospitalServer.DataAccess\\eHospitalServer.DataAccess.csproj|solutionrelative:ehospitalserver.dataaccess\\migrations\\20240825152830_tables_created.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3877FC28-87F3-457D-AE9F-E968C8C3A963}|eHospitalServer.DataAccess\\eHospitalServer.DataAccess.csproj|c:\\users\\ramaz\\desktop\\live\\ehospital\\ehospitalserver\\ehospitalserver.dataaccess\\migrations\\applicationdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3877FC28-87F3-457D-AE9F-E968C8C3A963}|eHospitalServer.DataAccess\\eHospitalServer.DataAccess.csproj|solutionrelative:ehospitalserver.dataaccess\\migrations\\applicationdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3877FC28-87F3-457D-AE9F-E968C8C3A963}|eHospitalServer.DataAccess\\eHospitalServer.DataAccess.csproj|c:\\users\\ramaz\\desktop\\live\\ehospital\\ehospitalserver\\ehospitalserver.dataaccess\\context\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3877FC28-87F3-457D-AE9F-E968C8C3A963}|eHospitalServer.DataAccess\\eHospitalServer.DataAccess.csproj|solutionrelative:ehospitalserver.dataaccess\\context\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{08FA889E-5700-436A-BE24-7BE0816D7F85}|eHospitalServer.Entities\\eHospitalServer.Entities.csproj|c:\\users\\ramaz\\desktop\\live\\ehospital\\ehospitalserver\\ehospitalserver.entities\\configurations\\doctordetailconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{08FA889E-5700-436A-BE24-7BE0816D7F85}|eHospitalServer.Entities\\eHospitalServer.Entities.csproj|solutionrelative:ehospitalserver.entities\\configurations\\doctordetailconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3877FC28-87F3-457D-AE9F-E968C8C3A963}|eHospitalServer.DataAccess\\eHospitalServer.DataAccess.csproj|c:\\users\\ramaz\\desktop\\live\\ehospital\\ehospitalserver\\ehospitalserver.dataaccess\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -17,22 +37,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{5AFAED4F-45E6-4C62-8DCF-8F27F47520DB}|eHospitalServer.WebAPI\\eHospitalServer.WebAPI.csproj|c:\\users\\ramaz\\desktop\\live\\ehospital\\ehospitalserver\\ehospitalserver.webapi\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{5AFAED4F-45E6-4C62-8DCF-8F27F47520DB}|eHospitalServer.WebAPI\\eHospitalServer.WebAPI.csproj|solutionrelative:ehospitalserver.webapi\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5AFAED4F-45E6-4C62-8DCF-8F27F47520DB}|eHospitalServer.WebAPI\\eHospitalServer.WebAPI.csproj|c:\\users\\ramaz\\desktop\\live\\ehospital\\ehospitalserver\\ehospitalserver.webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5AFAED4F-45E6-4C62-8DCF-8F27F47520DB}|eHospitalServer.WebAPI\\eHospitalServer.WebAPI.csproj|solutionrelative:ehospitalserver.webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3877FC28-87F3-457D-AE9F-E968C8C3A963}|eHospitalServer.DataAccess\\eHospitalServer.DataAccess.csproj|c:\\users\\ramaz\\desktop\\live\\ehospital\\ehospitalserver\\ehospitalserver.dataaccess\\context\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3877FC28-87F3-457D-AE9F-E968C8C3A963}|eHospitalServer.DataAccess\\eHospitalServer.DataAccess.csproj|solutionrelative:ehospitalserver.dataaccess\\context\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ramaz\\Desktop\\live\\eHospital\\eHospitalServer\\eHospitalServer.DataAccess\\Migrations\\20240825152830_Tables_Created.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:eHospitalServer.DataAccess\\Migrations\\20240825152830_Tables_Created.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{08FA889E-5700-436A-BE24-7BE0816D7F85}|eHospitalServer.Entities\\eHospitalServer.Entities.csproj|c:\\users\\ramaz\\desktop\\live\\ehospital\\ehospitalserver\\ehospitalserver.entities\\configurations\\doctordetailconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{08FA889E-5700-436A-BE24-7BE0816D7F85}|eHospitalServer.Entities\\eHospitalServer.Entities.csproj|solutionrelative:ehospitalserver.entities\\configurations\\doctordetailconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3877FC28-87F3-457D-AE9F-E968C8C3A963}|eHospitalServer.DataAccess\\eHospitalServer.DataAccess.csproj|c:\\users\\ramaz\\desktop\\live\\ehospital\\ehospitalserver\\ehospitalserver.dataaccess\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -62,7 +66,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 10,
           "Children": [
             {
               "$type": "Bookmark",
@@ -86,28 +90,28 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "DatabaseMigratorJob.cs",
-              "DocumentMoniker": "C:\\Users\\ramaz\\Desktop\\live\\eHospital\\eHospitalServer\\eHospitalServer.DataAccess\\BackgroundJobs\\DatabaseMigratorJob.cs",
-              "RelativeDocumentMoniker": "eHospitalServer.DataAccess\\BackgroundJobs\\DatabaseMigratorJob.cs",
-              "ToolTip": "C:\\Users\\ramaz\\Desktop\\live\\eHospital\\eHospitalServer\\eHospitalServer.DataAccess\\BackgroundJobs\\DatabaseMigratorJob.cs*",
-              "RelativeToolTip": "eHospitalServer.DataAccess\\BackgroundJobs\\DatabaseMigratorJob.cs*",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAA0AAAA",
+              "DocumentIndex": 4,
+              "Title": "ApplicationDbContextModelSnapshot.cs",
+              "DocumentMoniker": "C:\\Users\\ramaz\\Desktop\\live\\eHospital\\eHospitalServer\\eHospitalServer.DataAccess\\Migrations\\ApplicationDbContextModelSnapshot.cs",
+              "RelativeDocumentMoniker": "eHospitalServer.DataAccess\\Migrations\\ApplicationDbContextModelSnapshot.cs",
+              "ToolTip": "C:\\Users\\ramaz\\Desktop\\live\\eHospital\\eHospitalServer\\eHospitalServer.DataAccess\\Migrations\\ApplicationDbContextModelSnapshot.cs",
+              "RelativeToolTip": "eHospitalServer.DataAccess\\Migrations\\ApplicationDbContextModelSnapshot.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-25T14:24:52.759Z",
+              "WhenOpened": "2024-08-25T15:55:05.897Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "DependencyInjection.cs",
-              "DocumentMoniker": "C:\\Users\\ramaz\\Desktop\\live\\eHospital\\eHospitalServer\\eHospitalServer.DataAccess\\DependencyInjection.cs",
-              "RelativeDocumentMoniker": "eHospitalServer.DataAccess\\DependencyInjection.cs",
-              "ToolTip": "C:\\Users\\ramaz\\Desktop\\live\\eHospital\\eHospitalServer\\eHospitalServer.DataAccess\\DependencyInjection.cs",
-              "RelativeToolTip": "eHospitalServer.DataAccess\\DependencyInjection.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAAABwAAAAJAAAA",
+              "Title": "DatabaseMigratorJob.cs",
+              "DocumentMoniker": "C:\\Users\\ramaz\\Desktop\\live\\eHospital\\eHospitalServer\\eHospitalServer.DataAccess\\BackgroundJobs\\DatabaseMigratorJob.cs",
+              "RelativeDocumentMoniker": "eHospitalServer.DataAccess\\BackgroundJobs\\DatabaseMigratorJob.cs",
+              "ToolTip": "C:\\Users\\ramaz\\Desktop\\live\\eHospital\\eHospitalServer\\eHospitalServer.DataAccess\\BackgroundJobs\\DatabaseMigratorJob.cs",
+              "RelativeToolTip": "eHospitalServer.DataAccess\\BackgroundJobs\\DatabaseMigratorJob.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-25T14:30:24.367Z",
+              "WhenOpened": "2024-08-25T14:24:52.759Z",
               "EditorCaption": ""
             },
             {
@@ -118,7 +122,7 @@
               "RelativeDocumentMoniker": "eHospitalServer.DataAccess\\Context\\ApplicationDbContext.cs",
               "ToolTip": "C:\\Users\\ramaz\\Desktop\\live\\eHospital\\eHospitalServer\\eHospitalServer.DataAccess\\Context\\ApplicationDbContext.cs",
               "RelativeToolTip": "eHospitalServer.DataAccess\\Context\\ApplicationDbContext.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAEAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-25T15:23:15.993Z",
               "EditorCaption": ""
@@ -126,6 +130,58 @@
             {
               "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "20240825152830_Tables_Created.cs",
+              "DocumentMoniker": "C:\\Users\\ramaz\\Desktop\\live\\eHospital\\eHospitalServer\\eHospitalServer.DataAccess\\Migrations\\20240825152830_Tables_Created.cs",
+              "RelativeDocumentMoniker": "eHospitalServer.DataAccess\\Migrations\\20240825152830_Tables_Created.cs",
+              "ToolTip": "C:\\Users\\ramaz\\Desktop\\live\\eHospital\\eHospitalServer\\eHospitalServer.DataAccess\\Migrations\\20240825152830_Tables_Created.cs",
+              "RelativeToolTip": "eHospitalServer.DataAccess\\Migrations\\20240825152830_Tables_Created.cs",
+              "ViewState": "AQIAAHcAAAAAAAAAAAAAwJ0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-25T15:28:30.127Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\ramaz\\Desktop\\live\\eHospital\\eHospitalServer\\eHospitalServer.WebAPI\\Program.cs",
+              "RelativeDocumentMoniker": "eHospitalServer.WebAPI\\Program.cs",
+              "ToolTip": "C:\\Users\\ramaz\\Desktop\\live\\eHospital\\eHospitalServer\\eHospitalServer.WebAPI\\Program.cs",
+              "RelativeToolTip": "eHospitalServer.WebAPI\\Program.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAQwCAAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-25T14:43:51.414Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SeedJob.cs",
+              "DocumentMoniker": "C:\\Users\\ramaz\\Desktop\\live\\eHospital\\eHospitalServer\\eHospitalServer.DataAccess\\BackgroundJobs\\SeedJob.cs",
+              "RelativeDocumentMoniker": "eHospitalServer.DataAccess\\BackgroundJobs\\SeedJob.cs",
+              "ToolTip": "C:\\Users\\ramaz\\Desktop\\live\\eHospital\\eHospitalServer\\eHospitalServer.DataAccess\\BackgroundJobs\\SeedJob.cs",
+              "RelativeToolTip": "eHospitalServer.DataAccess\\BackgroundJobs\\SeedJob.cs",
+              "ViewState": "AQIAAIcAAAAAAAAAAAAYwJ4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-25T15:20:12.461Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "DoctorDetailConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\ramaz\\Desktop\\live\\eHospital\\eHospitalServer\\eHospitalServer.Entities\\Configurations\\DoctorDetailConfiguration.cs",
+              "RelativeDocumentMoniker": "eHospitalServer.Entities\\Configurations\\DoctorDetailConfiguration.cs",
+              "ToolTip": "C:\\Users\\ramaz\\Desktop\\live\\eHospital\\eHospitalServer\\eHospitalServer.Entities\\Configurations\\DoctorDetailConfiguration.cs",
+              "RelativeToolTip": "eHospitalServer.Entities\\Configurations\\DoctorDetailConfiguration.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-25T15:25:26.568Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "appsettings.Development.json",
               "DocumentMoniker": "C:\\Users\\ramaz\\Desktop\\live\\eHospital\\eHospitalServer\\eHospitalServer.WebAPI\\appsettings.Development.json",
               "RelativeDocumentMoniker": "eHospitalServer.WebAPI\\appsettings.Development.json",
@@ -138,46 +194,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\ramaz\\Desktop\\live\\eHospital\\eHospitalServer\\eHospitalServer.WebAPI\\Program.cs",
-              "RelativeDocumentMoniker": "eHospitalServer.WebAPI\\Program.cs",
-              "ToolTip": "C:\\Users\\ramaz\\Desktop\\live\\eHospital\\eHospitalServer\\eHospitalServer.WebAPI\\Program.cs",
-              "RelativeToolTip": "eHospitalServer.WebAPI\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAAAAAA",
+              "DocumentIndex": 7,
+              "Title": "DependencyInjection.cs",
+              "DocumentMoniker": "C:\\Users\\ramaz\\Desktop\\live\\eHospital\\eHospitalServer\\eHospitalServer.DataAccess\\DependencyInjection.cs",
+              "RelativeDocumentMoniker": "eHospitalServer.DataAccess\\DependencyInjection.cs",
+              "ToolTip": "C:\\Users\\ramaz\\Desktop\\live\\eHospital\\eHospitalServer\\eHospitalServer.DataAccess\\DependencyInjection.cs",
+              "RelativeToolTip": "eHospitalServer.DataAccess\\DependencyInjection.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAABwAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-25T14:43:51.414Z",
+              "WhenOpened": "2024-08-25T14:30:24.367Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "SeedJob.cs",
-              "DocumentMoniker": "C:\\Users\\ramaz\\Desktop\\live\\eHospital\\eHospitalServer\\eHospitalServer.DataAccess\\BackgroundJobs\\SeedJob.cs",
-              "RelativeDocumentMoniker": "eHospitalServer.DataAccess\\BackgroundJobs\\SeedJob.cs",
-              "ToolTip": "C:\\Users\\ramaz\\Desktop\\live\\eHospital\\eHospitalServer\\eHospitalServer.DataAccess\\BackgroundJobs\\SeedJob.cs",
-              "RelativeToolTip": "eHospitalServer.DataAccess\\BackgroundJobs\\SeedJob.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAhAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-25T15:20:12.461Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "20240825152830_Tables_Created.cs",
-              "DocumentMoniker": "C:\\Users\\ramaz\\Desktop\\live\\eHospital\\eHospitalServer\\eHospitalServer.DataAccess\\Migrations\\20240825152830_Tables_Created.cs",
-              "RelativeDocumentMoniker": "eHospitalServer.DataAccess\\Migrations\\20240825152830_Tables_Created.cs",
-              "ToolTip": "C:\\Users\\ramaz\\Desktop\\live\\eHospital\\eHospitalServer\\eHospitalServer.DataAccess\\Migrations\\20240825152830_Tables_Created.cs",
-              "RelativeToolTip": "eHospitalServer.DataAccess\\Migrations\\20240825152830_Tables_Created.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-25T15:28:30.127Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "AppointmentRepository.cs",
               "DocumentMoniker": "C:\\Users\\ramaz\\Desktop\\live\\eHospital\\eHospitalServer\\eHospitalServer.DataAccess\\Repositories\\AppointmentRepository.cs",
               "RelativeDocumentMoniker": "eHospitalServer.DataAccess\\Repositories\\AppointmentRepository.cs",
@@ -190,7 +220,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "AppointmentService.cs",
               "DocumentMoniker": "C:\\Users\\ramaz\\Desktop\\live\\eHospital\\eHospitalServer\\eHospitalServer.DataAccess\\Services\\AppointmentService.cs",
               "RelativeDocumentMoniker": "eHospitalServer.DataAccess\\Services\\AppointmentService.cs",
@@ -203,7 +233,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "AuthService.cs",
               "DocumentMoniker": "C:\\Users\\ramaz\\Desktop\\live\\eHospital\\eHospitalServer\\eHospitalServer.DataAccess\\Services\\AuthService.cs",
               "RelativeDocumentMoniker": "eHospitalServer.DataAccess\\Services\\AuthService.cs",
@@ -216,7 +246,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "UserService.cs",
               "DocumentMoniker": "C:\\Users\\ramaz\\Desktop\\live\\eHospital\\eHospitalServer\\eHospitalServer.DataAccess\\Services\\UserService.cs",
               "RelativeDocumentMoniker": "eHospitalServer.DataAccess\\Services\\UserService.cs",
@@ -229,20 +259,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "DoctorDetailConfiguration.cs",
-              "DocumentMoniker": "C:\\Users\\ramaz\\Desktop\\live\\eHospital\\eHospitalServer\\eHospitalServer.Entities\\Configurations\\DoctorDetailConfiguration.cs",
-              "RelativeDocumentMoniker": "eHospitalServer.Entities\\Configurations\\DoctorDetailConfiguration.cs",
-              "ToolTip": "C:\\Users\\ramaz\\Desktop\\live\\eHospital\\eHospitalServer\\eHospitalServer.Entities\\Configurations\\DoctorDetailConfiguration.cs",
-              "RelativeToolTip": "eHospitalServer.Entities\\Configurations\\DoctorDetailConfiguration.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAdAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-25T15:25:26.568Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "UserManagerExtensions.cs",
               "DocumentMoniker": "C:\\Users\\ramaz\\Desktop\\live\\eHospital\\eHospitalServer\\eHospitalServer.DataAccess\\Extensions\\UserManagerExtensions.cs",
               "RelativeDocumentMoniker": "eHospitalServer.DataAccess\\Extensions\\UserManagerExtensions.cs",

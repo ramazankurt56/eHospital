@@ -13,16 +13,28 @@ COPY ["eHospitalServer/eHospitalServer.Entities/eHospitalServer.Entities.csproj"
 COPY ["eHospitalServer/eHospitalServer.DataAccess/eHospitalServer.DataAccess.csproj", "eHospitalServer.DataAccess/"]
 
 WORKDIR /src/eHospitalServer.WebAPI
-RUN dotnet restore "eHospitalServer.WebAPI.csproj"
+RUN dotnet restore "eHospitalServer.WebAPI/eHospitalServer.WebAPI.csproj"
 
-COPY . .
 
-RUN dotnet build "eHospitalServer.WebAPI.csproj" -c Release -o /app/build
+COPY ["eHospitalServer/eHospitalServer.WebAPI/", "eHospitalServer.WebAPI/"]
+COPY ["eHospitalServer/eHospitalServer.Business/", "eHospitalServer.Business/"]
+COPY ["eHospitalServer/eHospitalServer.Entities/", "eHospitalServer.Entities/"]
+COPY ["eHospitalServer/eHospitalServer.DataAccess/", "eHospitalServer.DataAccess/"]
+
+WORKDIR "/src/eHospitalServer.WebAPI/"
+
+RUN dotnet build "eHospitalServer.WebAPI.csproj" -c $BUILD_CONFIGURATION -o /app/build --no-restore
 
 FROM build AS publish
-RUN dotnet publish "eHospitalServer.WebAPI.csproj" -c Release -o /app/publish /p:UseAppHost=false
+RUN dotnet publish "eHospitalServer.WebAPI.csproj"-c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false --no-restore
 
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
 ENTRYPOINT ["dotnet", "eHospitalServer.WebAPI.dll"]
+
+
+
+
+
+
