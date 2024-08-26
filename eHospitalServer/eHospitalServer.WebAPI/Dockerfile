@@ -12,7 +12,7 @@ COPY ["eHospitalServer/eHospitalServer.Business/eHospitalServer.Business.csproj"
 COPY ["eHospitalServer/eHospitalServer.Entities/eHospitalServer.Entities.csproj", "eHospitalServer.Entities/"]
 COPY ["eHospitalServer/eHospitalServer.DataAccess/eHospitalServer.DataAccess.csproj", "eHospitalServer.DataAccess/"]
 
-WORKDIR /src/eHospitalServer.WebAPI
+WORKDIR /src
 RUN dotnet restore "eHospitalServer.WebAPI/eHospitalServer.WebAPI.csproj"
 
 
